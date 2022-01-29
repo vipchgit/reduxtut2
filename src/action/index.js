@@ -8,4 +8,24 @@ export const decNumber = () =>{
     type:"DECCREMENT"
   }
 }
-// git@github.com:vipchgit/reduxdemo.git
+
+export const addTodo = (data) =>{
+  return {
+    type:"ADD_TODO",
+    payload:{
+      id: new Date().getTime().toLocaleString(),
+      data
+    }
+  }
+}
+export const deleteTodo = (id) =>{
+  return {
+    type:"DELETE_TODO",
+    payload:{ id }
+  }
+}
+export const deleteAllTodo = (id) =>{
+  return {
+    type:"DELETE_ALL_TODO"
+}
+}
